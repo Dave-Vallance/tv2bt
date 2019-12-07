@@ -8,6 +8,6 @@ setup(
    author='Dave Vallance',
    author_email='dave@backtest-rookies.com',
    license='MIT',
-   packages=['tv2t'],
+   packages=['tv2bt'],
    install_requires=['backtrader','flask'],
 )

@@ -8,7 +8,7 @@ you are struggling to find some good, reliable intra-day data. Tradingview
 has plenty we can now access in Backtrader.
 
 ## Introduction
-for a full overview and gentle introduction please see: https://backtest-rookies.com
+for a full overview and gentle introduction please see: https://backtest-rookies.com/2019/11/22/tv2bt-tradingview-to-backtrader-module/
 
 ## Installation
 Note: Developed for Python 3.x only.

@@ -57,5 +57,5 @@ docs/_build/
 # PyBuilder
 target/
 
-# WIP
-example_strategy_crypto.py
+# My Stuff
+.idea/

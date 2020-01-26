@@ -28,7 +28,6 @@ from collections import deque
 from datetime import datetime
 import backtrader as bt
 from backtrader.feed import DataBase
-from .server import data_queue
 import queue
 
 # ------------------------------------------------------------------------------
@@ -52,6 +51,9 @@ class TVFeed(DataBase):
     _ST_START, _ST_LIVE, _ST_HISTORBACK, _ST_OVER = range(4)
 
     def __init__(self, config={}, retries=5):
+
+        global data_queue
+        from .server import data_queue
 
         self._data = deque() # data queue for price data
 

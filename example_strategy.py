@@ -23,7 +23,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 '''
-
+import tv2bt.config
+tv2bt.config.PORT = 8123
 import backtrader as bt
 from datetime import datetime
 from tv2bt import TVFeed

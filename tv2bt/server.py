@@ -28,6 +28,7 @@ from flask import Flask, request, render_template
 from threading import Thread
 import queue
 import ast
+from .config import *
 import logging
 
 
@@ -37,10 +38,8 @@ log.setLevel(logging.ERROR)
 # ------------------------------------------------------------------------------
 # Create Server
 # ------------------------------------------------------------------------------
-
 data_queue = dict()
 server = Flask(__name__)
-
 
 @server.route("/tv", methods=['POST'])
 def alert():
@@ -70,6 +69,5 @@ def alert():
 
         return 'OK', 200
 
-
-server_thread = Thread(target=server.run, kwargs={'host':'0.0.0.0', 'port':8123, 'debug': False})
+server_thread = Thread(target=server.run, kwargs={'host':'0.0.0.0', 'port':PORT, 'debug': False})
 server_thread.start()

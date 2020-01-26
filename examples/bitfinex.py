@@ -209,7 +209,6 @@ config = {'apiKey': apikey,
 # Add our strategy
 cerebro.addstrategy(TVTest)
 
-
 print('Getting Store')
 # Create data feeds
 store = CCXTStore(exchange='bitfinex', currency='USD', config=config, retries=5, debug=False)

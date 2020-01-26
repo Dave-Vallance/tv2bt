@@ -1,4 +1,20 @@
 import requests
+import argparse
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='Test Program to trigger alerts')
+
+    parser.add_argument('--port',
+                        default=8123,
+                        help='Port of the server')
+
+    parser.add_argument('--endpoint',
+                        default='tv',
+                        help='endpoint to target')
+
+    return parser.parse_args()
+
+args = parse_args()
 
 while True:
     ticker = input('Ticker: ')
@@ -29,6 +45,6 @@ while True:
         print('OHLCV input not recognized. Try again')
 
     # Send the request!
-    resp = requests.post('http://0.0.0.0:8123/tv', json=data)
+    resp = requests.post('http://0.0.0.0:{}/{}'.format(args.port, args.endpoint), json=data)
     print('Status Code: {}'.format(resp.status_code))
     print('Response: {}'.format(resp.text))

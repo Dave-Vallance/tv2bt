@@ -121,6 +121,9 @@ class TVTest(bt.Strategy):
                 # Specify leverage!
                 qty = ((cash * self.p.perc_size) / self.data.close[0]) * self.p.leverage # 2x leverage using 95% cash
 
+                # Round to the nearest 8 places otherwise, we can end up with a bit left over when trying to close.
+                qty = round(qty, 8)
+
                 if pos < 0:
                     qty = qty + -pos
 
@@ -138,6 +141,9 @@ class TVTest(bt.Strategy):
 
                 # Specify leverage!
                 qty = ((cash * self.p.perc_size) / self.data.close[0]) * self.p.leverage # 2x leverage using 95% cash
+
+                # Round to the nearest 8 places otherwise, we can end up with a bit left over when trying to close.
+                qty = round(qty, 8)
 
                 if pos > 0:
                     qty = qty + pos

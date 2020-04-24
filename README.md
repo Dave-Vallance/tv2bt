@@ -24,7 +24,7 @@ If you are able to see these alerts but you are not seeing Tradingview alerts, c
 
 ## Donations Welcome, but not required!
 
-Download The Brave Browswer. A privacy focused browser that supports content
+Download The Brave Browser. A privacy focused browser that supports content
 creators: https://brave.com/dav470
 
 Tips are are lovely too.
